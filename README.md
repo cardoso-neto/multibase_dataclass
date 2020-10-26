@@ -1,8 +1,10 @@
 # multibase_dataclass
 
-A python dataclass wrapper for py-multibase.
+A python dataclass wrapper for [multiformats/py-multibase](https://github.com/multiformats/py-multibase) which is the official python implementation of the [multiformats/multibase](https://github.com/multiformats/multibase) protocol.
 
-It makes it easier to tell what you're dealing with, instead of just juggling bytes-type vars around.
+This makes it easier to tell what you're dealing with, instead of just juggling bytes-type vars around.
+
+[Here](src/multibase_dataclass/__init__.py)'s a full list of the current supported encodings.
 
 ## Install
 
