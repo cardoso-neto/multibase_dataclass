@@ -7,6 +7,7 @@ It makes it easier to tell what you're dealing with, instead of just juggling by
 ## Install
 
 `git clone git@github.com:cardoso-neto/multibase_dataclass.git`
+
 `pip install -e ./multibase_dataclass/`
 
 ## Usage
