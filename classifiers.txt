@@ -1,0 +1,10 @@
+Development Status :: 3 - Alpha
+Intended Audience :: Developers
+Operating System :: Microsoft :: Windows
+Operating System :: MacOS
+Operating System :: POSIX :: Linux
+Operating System :: Unix
+Programming Language :: Python :: 3 :: Only
+Programming Language :: Python :: 3.8
+Topic :: Other/Nonlisted Topic
+Typing :: Typed
