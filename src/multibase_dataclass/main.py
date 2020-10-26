@@ -8,12 +8,18 @@ from .types import Encoding
 
 @dataclass(repr=True, eq=True, frozen=True)
 class Multibase:
-    data: Union[bytes, str]
     encoding: Optional[Encoding] = field(
         default=None, hash=False, compare=False
     )
+    data: Union[bytes, str] = None
+    # defaults to None but raises during post_init if no data is providded
+    # this is here to allow us to use the same positional order of arguments
+    # as py-multibase's encode() does.
 
     def __post_init__(self):
+        if self.data is None:
+            raise ValueError(f"`data` parameter cannot be {None}")
+
         if self.encoding is None:
             try:
                 self.encoding = get_codec(self.data)

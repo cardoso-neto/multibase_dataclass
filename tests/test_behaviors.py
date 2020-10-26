@@ -18,3 +18,8 @@ def test_multibase_to_bytes():
 def test_text_decoding_correctly():
     mb = get_fresh_instance()
     assert mb.decode() == bytes(TEXT, "utf-8")
+
+
+def test_raise_on_none_data():
+    with pytest.raises(ValueError):
+        mb = Multibase()

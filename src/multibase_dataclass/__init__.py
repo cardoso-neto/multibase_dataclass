@@ -1,5 +1,6 @@
 from .main import Multibase
 
+
 supported_encodings = {
     'identity',
     'base2',

@@ -23,12 +23,12 @@ setuptools.setup(
     version="0.1.0.2020.10.23",
     author="Nei Cardoso de Oliveira Neto",
     author_email="nei.neto@hotmail.com",
-    description="",
+    description="A python dataclass wrapper for py-multibase.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/cardoso-neto/multibase_dataclass",
     packages=setuptools.find_packages(where="src"),
-    package_dir={"": "src"},
+    package_dir={"": "src"},  # not sure if this line should be here
     classifiers=classifiers,
     keywords='multibase encodings wrapper dataclass object-oriented',
     # entry_points = {

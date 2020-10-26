@@ -1,2 +1,2 @@
-py-multibase
-pytest
+py-multibase>=1.0.3
+pytest>=6.1.1
