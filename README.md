@@ -1,16 +1,20 @@
 # multibase_dataclass
 
-A python dataclass wrapper for [multiformats/py-multibase](https://github.com/multiformats/py-multibase) which is the official python implementation of the [multiformats/multibase](https://github.com/multiformats/multibase) protocol.
+A encoding/decoding helper for all the most used encodings.
 
-This makes it easier to tell what you're dealing with, instead of just juggling bytes-type vars around.
+The `Multibase` class is:
+- hashable (you can use it as keys of a Dict)
+- immutable (a new object is created everytime you call `.reencode(some_encoding)`)
+- representable (it has a cute little `__repr__()`)
+- serializable (JSON, coming soon)
 
-[Here](src/multibase_dataclass/__init__.py)'s a full list of the current supported encodings.
+Multibase instances also have an `encoding` attribute, which makes it easy to tell what you're dealing with, instead of just juggling bytes-type vars around.
+
+And [here](src/multibase_dataclass/__init__.py) is a full list of the currently supported encodings.
 
 ## Install
 
-`git clone git@github.com:cardoso-neto/multibase_dataclass.git`
-
-`pip install -e ./multibase_dataclass/`
+`pip install git+https://github.com/cardoso-neto/multibase_dataclass.git@master`
 
 ## Usage
 
@@ -29,3 +33,16 @@ print(bar.reencode("base64"))
 print(bar.reencode("base16"))
 # Multibase(encoding='base16', data=b'f7a35756e4a48627146357079545359')
 ```
+
+## Acknowledgements
+
+This is technically a python [dataclass](https://docs.python.org/3/library/dataclasses.html) wrapper for [multiformats/py-multibase](https://github.com/multiformats/py-multibase) which is the official python implementation of the [multiformats/multibase](https://github.com/multiformats/multibase) protocol.
+
+
+## Contributing
+
+`git clone git@github.com:cardoso-neto/multibase_dataclass.git`
+
+`pip install -e ./multibase_dataclass/`
+
+Work on it and run tests with `pytest -v` after running `pip install -r requirements-test.txt`.
